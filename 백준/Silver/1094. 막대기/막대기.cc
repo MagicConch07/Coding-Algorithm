@@ -1,15 +1,15 @@
 #include <iostream>
 #include <bitset>
-#include <string>
 
 int main()
 {
 	std::string input;
+    int num = 0;
 	int result = 0;
 
-	std::cin >> input;
+	std::cin >> num;
 
-	input = std::bitset<7>(std::stoi(input)).to_string();
+	input = std::bitset<7>(num).to_string();
 
 	for (int i = 0; i < 7; ++i)
 	{
