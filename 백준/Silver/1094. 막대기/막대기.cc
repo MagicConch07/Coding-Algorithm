@@ -1,22 +1,16 @@
 #include <iostream>
-#include <bitset>
+#include <string>
 
 int main()
 {
-	std::string input;
-    int num = 0;
+	int input;
 	int result = 0;
 
-	std::cin >> num;
-
-	input = std::bitset<7>(num).to_string();
+	std::cin >> input;
 
 	for (int i = 0; i < 7; ++i)
 	{
-		if (input[i] == '1')
-		{
-			++result;
-		}
+		if (input & (1 << i)) ++result;
 	}
 
 	std::cout << result;
